@@ -48,7 +48,7 @@ export default function TextEditor() {
   const [username] = useState(`User ${Math.floor(Math.random() * 10000)}`);
 
   useEffect(() => {
-    const s = io("http://localhost:3001");
+    const s = io("https://text-editor-server-zfpz.onrender.com/");
     setSocket(s);
     return () => s.disconnect();
   }, []);
